@@ -13,7 +13,7 @@ export const Text = styled("p", {
         color: "red",
         backgroundColor: "orange",
       },
-    },
+    },  
     Disabled:{
         true:{
             cursor:"not-allowed",
@@ -25,6 +25,5 @@ export const Text = styled("p", {
             background:"linear-gradient(red,yellow)"
         }
     },
-
   },
 });

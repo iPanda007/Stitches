@@ -3,8 +3,8 @@ import {createStitches} from '@stitches/react';
 export const {styled} = createStitches({
 theme:{
     colors:{
-        accentColour:'red',
-
+        accentColour:'yellow',
+        bgOne:"green"
     },
     fontSizes:{
         100: "14px"

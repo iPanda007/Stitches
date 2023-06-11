@@ -1,20 +1,51 @@
-import React from 'react'
-import { styled } from './ui/stitches.config'
-import { Text } from './ui/text'
+import React from "react";
+import { css, globalCss } from "@stitches/core";
 
-const Title = styled('h1',{
-  color:"$accentColour",
-  fontSize:'$100',
+const globalStyles = globalCss({
+  "*": { margin: 0, padding: 0 },
+  button: { border: "none" },
+});
 
-})
-
+const button = css({
+  backgroundColor: "gainsboro",
+  borderRadius: "9999px",
+  fontSize: "13px",
+  padding: "10px 15px",
+  "&:hover": {
+    backgroundColor: "lightgray",
+  },
+  variants: {
+    disabled: {
+      true: {
+        cursor: "not-allowed",
+      },
+    },
+    color: {
+      red: {
+        background: "red",
+      },
+      green: {
+        background: "green",
+      },
+    
+    },
+  
+  
+  
+  },
+});
 const App = () => {
+  globalStyles();
   return (
-    <div>
-        <Title>Aung Kyaw Khaing</Title>
-        <Text Color="red" Gradient Disabled>Introduction to Stitches</Text>
-    </div>
-  )
-}
+    <button
+      className={button({  
+          color:'red',
 
-export default App
+      })}
+    >
+      Aung Kyaw Khaing
+    </button>
+  );
+};
+
+export default App;
